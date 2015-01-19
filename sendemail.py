@@ -1,5 +1,18 @@
 #!/usr/bin/python -tt
-# TODO: add license
+
+# This file is part of secretsanta.
+#    secretsanta is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    secretsanta is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with secretsanta.  If not, see <http://www.gnu.org/licenses/>.
 
 """A 'Secret Santa' emailing application. It reads a csv file containing 
     names, room numbers and email addresses from both 'givers' and 'receivers', 
@@ -31,6 +44,8 @@ def send_email(pair_list):
             "If you cannot make it to the party, please do let us know and drop the gift in your person's pigeon hole on the day, or deliver it to us so we can hand it over on the party.",
             "",
             "Remember, the Secret Valentine party takes place 9 February at 8pm in the William Goodenough House Large Common Room.",
+            "",
+            "Please email us if you have any questions or issues (goodenoughwelfare@gmail.com).",
             "",
             "See you then!",
             "",
