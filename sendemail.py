@@ -28,34 +28,32 @@ import smtplib
     """
 def send_email(pair_list):
     for row in pair_list:
-        from_addr = 'Goodenough Welfare <goodenoughwelfare@gmail.com>'
+        from_addr = 'Secret Santa <johnsmith@hotmail.com>'
         to_addr  = row[2]
         msg = "\r\n".join([
             "From: " + from_addr,
             "To: " + to_addr,
-            "Subject: Secret Valentine",
+            "Subject: Secret Santa",
             "",
             "Dear " + row[0][1:] + " (room " + row[1] + ")",
             "",
-            "Thanks for participating in the Secret Valentine!",
+            "Thanks for participating in the Secret Santa!",
             "",
             "Please find a present for " + row[3] + " (room " + row[4] + ").",
-            "You shouldn't spend over 5 pounds, and homemade presents are highly encouraged.",
-            "If you cannot make it to the party, please do let us know and drop the gift in your person's pigeon hole on the day, or deliver it to us so we can hand it over on the party.",
             "",
-            "Remember, the Secret Valentine party takes place 9 February at 8pm in the William Goodenough House Large Common Room.",
-            "",
-            "Please email us if you have any questions or issues (goodenoughwelfare@gmail.com).",
+            "Please reply to this email if you have any questions or issues.",
             "",
             "See you then!",
             "",
-            "Your Goodenough Welfare officers"
+            "Santa"
             ])
-        username = 'goodenoughwelfare@gmail.com'
-        password = 'thisisnotthepassword'
-        server = smtplib.SMTP('smtp.gmail.com:587')
+        username = 'johnsmith@hotmail.com'
+        password = 'xxxxxxxx'
+        server = smtplib.SMTP('smtp-mail.outlook.com',587) # if Hotmail/Microsoft Outlook
+        #server = smtplib.SMTP('smtp.gmail.com:587') # if gmail
         server.ehlo()
         server.starttls()
+        server.ehlo()
         server.login(username,password)
         server.sendmail(from_addr, to_addr, msg)
         server.quit()
